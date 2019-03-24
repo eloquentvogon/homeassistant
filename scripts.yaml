@@ -1,0 +1,12 @@
+'1553397976800':
+  alias: dog_gone
+  sequence:
+  - alias: ''
+    data:
+      entity_id: media_player.shield
+      media_content_id: https://www.youtube.com/watch?v=-r8ROxXGXKw
+      media_content_type: video
+    service: media_extractor.play_media
+  - data:
+      entity_id: light.78110734840d8e8a3927
+    service: light.turn_on

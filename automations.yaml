@@ -1,0 +1,30 @@
+- id: '1552685251894'
+  alias: sundown light living room
+  trigger:
+  - event: sunset
+    offset: -00:30
+    platform: sun
+  condition:
+  - condition: state
+    entity_id: light.78110734840d8e8a3927
+    state: 'off'
+  action:
+  - data:
+      entity_id: light.78110734840d8e8a3927
+    entity_id: light.78110734840d8e8a3927
+    service: homeassistant.turn_on
+- id: '1552695994399'
+  alias: lights out
+  trigger:
+  - at: 00:00
+    platform: time
+  condition: []
+  action:
+  - data: {}
+    entity_id: group.all_lights
+    service: light.turn_off
+- id: '1552939854881'
+  alias: ''
+  trigger: []
+  condition: []
+  action: []
